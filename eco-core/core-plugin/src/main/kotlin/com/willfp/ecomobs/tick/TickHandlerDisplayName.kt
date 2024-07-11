@@ -10,9 +10,5 @@ class TickHandlerDisplayName : TickHandler {
         if (tick % 5 != 0) {
             return
         }
-
-        mob.entity.getNearbyEntities(20.0, 20.0, 20.0)
-            .filterIsInstance<Player>()
-            .forEach { mob.entity.setClientsideDisplayName(it, mob.displayName.toComponent(), false) }
     }
 }
